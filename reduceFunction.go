@@ -5,26 +5,25 @@ func gcd(a,b int) int {
   if a == 0 {
     return b
   }
-
   return gcd(b % a, a)
 }
 
 func productReduce(n int,num []int,den []int)  {
-  new_num := 1
-  new_den := 1
+  nnum := 1
+  nden := 1
 
 
   for i :=0; i<n; i++{
-    new_num = new_num * num[i]
-    new_den = new_den * den[i]
+    nnum = nnum * num[i]
+    nden = nden * den[i]
   }
 
-  GCD := gcd(new_num, new_den)
+  CGCD := gcd(nnum, nden)
 
-  new_num = new_num / GCD
-  new_den = new_den / GCD
+  nnum = nnum / CGCD
+  nden = nden / CGCD
 
-  fmt.Print(new_num, "/", new_den)
+  fmt.Print(nnum, "/", nden)
 }
 func main()  {
   /*var n int
