@@ -19,10 +19,7 @@ func productReduce(n int,num []int,den []int)  {
     new_den = new_den * den[i]
   }
 
-
-
   GCD := gcd(new_num, new_den)
-
 
   new_num = new_num / GCD
   new_den = new_den / GCD
@@ -46,27 +43,6 @@ func main()  {
   for i := 0; i < n; i++ {
       fmt.Scanln(&den[i])
   }
-  /*var num [] int
-  var den [] int*/
-  //n := 3
 
-
-
-
-
-
- /*var num = []int{10,20,30}
-  var den = []int{10,20,30}*/
-  /*num = {1, 2, 5}
-  den = {2, 1, 6}*/
-
-/*  var num [3]int
-  var den [3]int
-   num[0]=1
-   num[1]=2
-   num[2]=5
-   den[0]=2
-   den[1]=1
-   den[2]=6*/
   productReduce(n, num, den)
 }
