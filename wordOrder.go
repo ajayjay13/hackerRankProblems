@@ -6,10 +6,6 @@ func productReduce(n int,st []string)  {
 
   distinct := 0
   k := 0
-  /*occ := make([]int, n)
-  for i:= 0; i < n; i++{
-    occ[i] = 1
-  }*/
   for i :=0; i<n-1; i++{
     count :=0
 
@@ -48,17 +44,11 @@ func productReduce(n int,st []string)  {
     }
 
     if count == 0{
-      //distinct = distinct+1
       occ[k]= 1
-    }/*else{
-      occ[k]= occ[k]+1
-    }*/
+    }
     k = k+1
   }
-  /*if st[n-1] != "" {
-    distinct = distinct+1
-    occ[k]= 1
-  }*/
+
 
   fmt.Print(distinct,"\n")
   for i:=0; i< distinct; i++ {
@@ -66,10 +56,8 @@ func productReduce(n int,st []string)  {
   }
 }
 func main()  {
-  /*var n int
-  fmt.Println("Enter a number")
-  fmt.Scanf("%d",&n)*/
-  n := 9
+  
+  n := 5
 
 
   fmt.Println("Enter the Strings")
